@@ -1,3 +1,17 @@
+const quotes = [
+  "Stay focused and crush your goals!",
+  "Small progress is still progress!",
+  "Remember, consistency is key!",
+  "Take it one task at a time!",
+  "Believe in yourself—you've got this!",
+  "Stay positive, work hard, make it happen.",
+  "Success is not the key to happiness. Happiness is the key to success.",
+  "The only way to do great work is to love what you do.",
+  "Don't watch the clock; do what it does. Keep going."
+];
+
+document.getElementById("motivation").textContent =
+  quotes[Math.floor(Math.random() * quotes.length)];
 
 let categories = [
   { title: "Personal", img: "girl.png" },
@@ -174,10 +188,9 @@ const renderTasks = () => {
 
     renderCategories();
     updateTotals();
+
   }
 };
-
-
 const toggleAddTaskForm = () => {
   addTaskWrapper.classList.toggle("active");
   blackBackdrop.classList.toggle("active");
@@ -259,11 +272,8 @@ themeToggle.addEventListener('click', () => {
   // Change icon and button appearance
   if (document.body.classList.contains('dark-mode')) {
     themeToggle.textContent = '🌑'; // Icon for dark mode
-    themeToggle.classList.remove('light-mode');
-    themeToggle.classList.add('dark-mode');
   } else {
-    themeToggle.textContent = '☀️'; // Icon for brightness
-    themeToggle.classList.remove('dark-mode');
-    themeToggle.classList.add('light-mode');
+    themeToggle.textContent = '☀️'; // Icon for light mode
   }
 });
+
