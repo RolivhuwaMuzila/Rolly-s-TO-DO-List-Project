@@ -277,3 +277,23 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
+const greetings = ["Hey! 😊🥰", "Hello! 👋", "Good day! 🌞", "Hi! 😄"];
+let greetingIndex = 0;
+const greetingText = document.getElementById("greeting-text");
+
+function changeGreeting() {
+    greetingText.textContent = greetings[greetingIndex];
+    greetingIndex = (greetingIndex + 1) % greetings.length;
+}
+
+setInterval(changeGreeting, 2000);  // Changes greeting every 2 seconds
+
+function updateDateTime() {
+  const dateTime = new Date();
+  const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+  document.getElementById('date-time').textContent = dateTime.toLocaleDateString('en-US', options);
+}
+
+setInterval(updateDateTime, 1000); // Updates every second
+updateDateTime(); // Initial call to display immediately
+

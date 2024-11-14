@@ -152,7 +152,8 @@
 .welcome {
     display: flex; /* Use flexbox to arrange content horizontally */
     align-items: center; /* Center the content vertically */
-  }
+    
+}
   
   .img {
     position: relative; 
@@ -182,7 +183,14 @@
 
 .welcome h1 {
     font-size: 1.5rem;
+    color: crimson;
+}
+.welcome h2 {
+    font-size: 1.5rem;
     color: black;
+    font-weight: 800;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
 }
 
 .welcome p {
@@ -208,6 +216,41 @@
 
 .welcome .img img {
     width: 5rem;
+}
+
+/* Style for the dynamic greeting */
+.greeting-text {
+    font-weight: 800;         /* Extra bold */
+    color: crimson;           /* Crimson color */
+    animation: fade-in 1s ease-in-out;
+}
+
+/* Blinking cursor effect */
+.greeting-text::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#date-time {
+    font-weight: bold;
+    color: black;
+    font-size: 0.9em;
+}
+
+#motivation {
+    color: crimson;
 }
 
 .categories-wrapper {
