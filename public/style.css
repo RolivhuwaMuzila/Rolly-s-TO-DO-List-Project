@@ -188,7 +188,7 @@
 .welcome h2 {
     font-size: 1.5rem;
     color: black;
-    font-weight: 800;
+    font-weight: 1000;
     display: flex;
     justify-content: center; /* Centers horizontally */
 }
@@ -513,7 +513,7 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
-
+/* Style for input group */
 .input-group {
     position: relative;
     margin-bottom: 20px;
@@ -577,20 +577,33 @@ button.add-btn {
     border-radius: 50% 50% 0 0;
     background-color: #fff;
 }
-/* Add color coding for priority levels */
-.priority-high {
-    background-color: red;
-    color: white;
+  
+  /* Optional: Add styles to task elements for better visual clarity */
+  .task-wrapper {
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+  /* Existing styles */
+.task-wrapper .delete {
+    cursor: pointer;
   }
   
-  .priority-medium {
-    background-color: yellow;
-    color: black;
+  .task-wrapper .task p {
+    margin: 5px 0; /* Space out each line */
   }
   
-  .priority-low {
-    background-color: green;
-    color: white;
+  .task-wrapper .task p:first-of-type {
+    font-weight: bold; /* Optional: make the task label stand out */
+  }
+  
+  .task-wrapper .task {
+    display: block; /* Make sure the task itself is displayed as a block */
+  }
+  
+  /* New style for priority text */
+  .task-wrapper .task p span {
+    font-weight: bold;  /* Make the priority text stand out */
+    color: inherit; /* This allows the color to be controlled dynamically */
   }
   
   /* Optional: Add styles to distinguish priority in the task list */
