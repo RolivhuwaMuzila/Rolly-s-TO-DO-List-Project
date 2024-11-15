@@ -37,9 +37,11 @@
           </div>
           <div class="welcome">
             <div class="content">
-              <h1>Todo-list App</h1>
-              <h1>Hey Rolly</h1>
-              <p>Today you have <span id="total-tasks">5</span> tasks</p>
+              <h2>Todo-List 📝</h2>
+              <h1 id="greeting-text">Hey! 😊🥰</h1>
+              <p id="date-time"></p>
+              <p>Today you have <span id="total-tasks"></span> tasks</p>
+              <p id="motivation">"Every small step counts toward your goals!"</p>              
             </div>
             <div class="img">
               <div class="backdrop"></div>
@@ -50,6 +52,7 @@
         <button id="themeToggle" class="brightness-toggle">
           ☀️ <!-- Icon for brightness -->
         </button>
+      
         <div class="categories-wrapper">
           <div class="categories">
             <div class="category">
@@ -183,6 +186,7 @@
           />
         </svg>
       </div>
+      
       <div class="black-backdrop"></div>
 <div class="add-task">
   <div class="add-task-backdrop"></div>
@@ -191,11 +195,15 @@
     <label for="task-input">Task</label>
     <input type="text" id="task-input" required />
   </div>
+
   <div class="input-group">
     <label for="category-select">Category</label>
-    <select id="category-select"></select>
+    <select id="category-select">
+      <!-- Category options will be populated dynamically -->
+    </select>
   </div>
-  <!-- Inside the "Add Task" section, add the priority dropdown -->
+
+  <!-- Priority dropdown -->
   <div class="input-group">
     <label for="priority-select">Priority</label>
     <select id="priority-select">
@@ -204,11 +212,20 @@
       <option value="low">Low</option>
     </select>
   </div>
+
+  <!-- Due Date calendar dropdown -->
+  <div class="input-group">
+    <label for="date-input">Due Date</label>
+    <input type="date" id="date-input" required />
+  </div>
+  
   <div class="btns">
     <button class="cancel-btn">Cancel</button>
     <button class="add-btn">Add</button>
   </div>
 </div>
+<div id="task-container"></div>
+
     <script src="script.js"></script>
   </body>
 </html>
