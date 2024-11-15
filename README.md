@@ -4,10 +4,11 @@
 This **To-Do List** application allows users to manage their tasks efficiently. Users can add tasks, mark them as complete, remove them, and organize tasks into categories. The application is built using **HTML**, **CSS**, and **JavaScript** for the front end, with **Node.js** handling server-side functionality. Data is stored in local storage to ensure tasks persist even after the page is refreshed.
 
 ## ✨ Features
-- 📝 **Add Tasks**: Users can input new tasks and assign them to specific categories.
-- ❌ **Remove/Delete Tasks**: Easily remove tasks that are no longer needed.
+- 📝 **Add Tasks**: Users can input new tasks, assign categories, set priority levels, and due dates.
+- ❌ **Remove/Delete Tasks**: Easily delete tasks you no longer need.
 - ✅ **Mark Complete**: Mark tasks as complete to keep track of progress.
 - 📂 **Categories**: Organize tasks into different categories for better management.
+- 🌞🌜 **Day/Night Mode**: Switch between day and night modes using the sun/moon emoji button.
 - 💾 **Data Persistence**: All tasks are saved in local storage, ensuring data is not lost on page reload.
 
 ## 💻 Technologies Used
@@ -15,41 +16,43 @@ This **To-Do List** application allows users to manage their tasks efficiently. 
 - ⚙️ **Backend**: Node.js
 - 🗃️ **Storage**: Local Storage
 
-## ⚙️ Installation
-To get started with this To-Do List application, follow these steps:
+## 🛠️ How It Works
+When you access the **To-Do List** application:
 
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   ```
+1. **Welcome Screen**: 
+   - You'll see a **To-Do List heading** along with a greeting on the left side.
+   - The **current date and time** are displayed, accompanied by motivational quotes.
 
-2. **Navigate to the Project Directory**:
-   ```bash
-   cd todo-list
-   ```
+2. **Day/Night Mode**: 
+   - In the top-right corner, there’s a **sun/moon emoji** 🌞🌜. Click it to toggle between day and night modes.
 
-3. **Install Dependencies** (if using Node.js for backend functionalities):
-   ```bash
-   npm install
-   ```
+3. **Adding a Task**:
+   - Click the **"+" button** to add a new task.
+   - Enter your **task name**.
+   - **Select a category** (e.g., Work, Personal, Health).
+   - **Choose a priority** level (High, Medium, Low).
+   - Set a **due date** for your task.
+   - Finally, click the **"Add" button** to save your task.
 
-4. **Open the Application**:
-   Open the `index.html` file in your web browser to view and use the application.
+4. **Viewing Tasks by Category**:
+   - To view your tasks, navigate to the specific **category** you chose when adding the task.
+   - Tasks will be displayed in this format:
+     ```
+     Read Bible  
+     Priority: High  
+     Due Date: 16/11/2024
+     ```
+
+5. **Deleting and Completing Tasks**:
+   - To delete a task, click the **small delete button** next to it.
+   - Once a task is done, click the **checkbox** to mark it as complete.
+   - ⚠️ **Note**: You cannot edit a task once it’s added. If changes are needed, you’ll have to delete it and create a new one.
 
 ## 🚀 Usage
 
-### ➕ Adding a Task
-- Enter the task description and select a category.
-- Click the **"Add Task"** button to add the task to your list.
-
-### ✅ Marking a Task as Complete
-- Click the checkbox next to the task to mark it as complete. Completed tasks will be styled differently.
-
-### ❌ Removing a Task
-- Click the **"Delete"** button next to the task you wish to remove.
-
-### 📂 Viewing Tasks by Category
-- Use the category filter to view tasks under specific categories.
+### Adding a Task
+- Enter the task details as explained above.
+- Use the **category filter** to organize and view tasks under specific sections.
 
 ## 💾 Local Storage
 This application utilizes the browser's local storage to save tasks. This means that even if you refresh the page or close the browser, your tasks will still be available the next time you open the application.
@@ -72,7 +75,6 @@ Special thanks to the communities that provide resources and support for web dev
 
 ## 📞 Contact
 For any questions or suggestions, feel free to reach out via [GitHub Issues](https://github.com/RolivhuwaMuzila/Rolly-s-TO-DO-List-Project/issues). 
-
 
 
    
