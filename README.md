@@ -9,6 +9,7 @@ This **To-Do List** application allows users to manage their tasks efficiently. 
 - ✅ **Mark Complete**: Mark tasks as complete to keep track of progress.
 - 📂 **Categories**: Organize tasks into different categories for better management.
 - 🌞🌜 **Day/Night Mode**: Switch between day and night modes using the sun/moon emoji button.
+- 📐 **Resizable To-Do List**: Easily resize the to-do list interface by dragging the bottom-right corner.
 - 💾 **Data Persistence**: All tasks are saved in local storage, ensuring data is not lost on page reload.
 
 ## 💻 Technologies Used
@@ -38,7 +39,7 @@ When you access the **To-Do List** application:
    - To view your tasks, navigate to the specific **category** you chose when adding the task.
    - Tasks will be displayed in this format:
      ```
-     Read Bible  
+     Task: Read Bible  
      Priority: High  
      Due Date: 16/11/2024
      ```
@@ -47,6 +48,9 @@ When you access the **To-Do List** application:
    - To delete a task, click the **small delete button** next to it.
    - Once a task is done, click the **checkbox** to mark it as complete.
    - ⚠️ **Note**: You cannot edit a task once it’s added. If changes are needed, you’ll have to delete it and create a new one.
+
+6. **Resizable Interface**:
+   - You can **resize** the to-do list interface by dragging from the **bottom-right corner** to adjust its size according to your preference.
 
 ## 🚀 Usage
 
@@ -76,5 +80,5 @@ Special thanks to the communities that provide resources and support for web dev
 ## 📞 Contact
 For any questions or suggestions, feel free to reach out via [GitHub Issues](https://github.com/RolivhuwaMuzila/Rolly-s-TO-DO-List-Project/issues). 
 
-
+  
    
