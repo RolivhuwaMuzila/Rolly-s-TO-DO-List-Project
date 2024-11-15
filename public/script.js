@@ -113,7 +113,8 @@ const renderCategories = () => {
 };
 
 const renderTasks = () => {
-  tasksContainer.innerHTML = "";
+  tasksContainer.innerHTML = ""; // Clear the container
+
   const categoryTasks = tasks.filter(
     (task) => task.category.toLowerCase() === selectedCategory.title.toLowerCase()
   );
@@ -136,7 +137,7 @@ const renderTasks = () => {
       checkbox.addEventListener("change", () => {
         const index = tasks.findIndex((t) => t.id === task.id);
         tasks[index].completed = !tasks[index].completed;
-        saveLocal();
+        saveLocal(); // Save the updated task to local storage
       });
 
       div.innerHTML = `
@@ -158,7 +159,7 @@ const renderTasks = () => {
         </div>
       `;
 
-      // Change the priority color here
+      // Set the priority color
       let priorityColor = "black"; // Default color
       if (task.priority === "High") {
         priorityColor = "red";
@@ -186,8 +187,8 @@ const renderTasks = () => {
           </svg>
         </span>
         <p>${task.task}</p>
-        <p>Priority: <span style="color: ${priorityColor};">${task.priority}</span></p> <!-- Apply color to priority -->
-        <p>Due Date: ${task.dueDate}</p>
+        <p>Priority: <span style="color: ${priorityColor};">${task.priority}</span></p>
+        <p>Due Date: ${task.dueDate !== "No due date" ? task.dueDate : "No due date"}</p> <!-- Fix here -->
       `;
       
       label.prepend(checkbox);
@@ -199,16 +200,15 @@ const renderTasks = () => {
       deleteBtn.addEventListener("click", () => {
         const index = tasks.findIndex((t) => t.id === task.id);
         tasks.splice(index, 1);
-        saveLocal();
-        renderTasks();
+        saveLocal(); // Save tasks to local storage after deletion
+        renderTasks(); // Re-render tasks
       });
     });
 
-    renderCategories();
-    updateTotals();
+    renderCategories(); // Re-render categories
+    updateTotals(); // Update task totals
   }
 };
-
 
 const toggleAddTaskForm = () => {
   addTaskWrapper.classList.toggle("active");
@@ -218,9 +218,11 @@ const toggleAddTaskForm = () => {
 
 const addTask = (e) => {
   e.preventDefault();
+
   const task = taskInput.value;
   const category = categorySelect.value;
   const priority = document.getElementById("priority-select").value; // Get priority from dropdown
+  const dueDate = document.getElementById("date-input").value; // Get the selected due date from the input
 
   if (task === "") {
     alert("Please enter a task");
@@ -229,14 +231,18 @@ const addTask = (e) => {
       id: tasks.length + 1,
       task,
       category,
-      priority,  // Store priority in task object
+      priority, // Store priority in task object
+      dueDate: dueDate || "No due date", // Add dueDate, fallback to "No due date" if empty
       completed: false,
     };
+
     taskInput.value = "";
+    document.getElementById("date-input").value = ""; // Clear the date input after adding the task
+
     tasks.push(newTask);
-    saveLocal();
+    saveLocal(); // Save tasks to localStorage
     toggleAddTaskForm();
-    renderTasks();
+    renderTasks(); // Re-render tasks
   }
 };
 
