@@ -38,7 +38,7 @@ When you access the **To-Do List** application:
    - To view your tasks, navigate to the specific **category** you chose when adding the task.
    - Tasks will be displayed in this format:
      ```
-     Task: Read Bible  
+     Read Bible  
      Priority: High  
      Due Date: 16/11/2024
      ```
